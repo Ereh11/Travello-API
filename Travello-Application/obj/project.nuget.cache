@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "XwyDDowpv+Y=",
+  "success": true,
+  "projectFilePath": "/home/hermes/dev/final/Travello-API/Travello-Application/Travello-Application.csproj",
+  "expectedPackageFiles": [
+    "/home/hermes/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.4/microsoft.aspnetcore.app.ref.9.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
