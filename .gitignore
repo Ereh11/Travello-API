@@ -30,3 +30,7 @@ project.nuget.cache
 .DS_Store
 Thumbs.db
 
+# env
+projectsettings.json
+
+
