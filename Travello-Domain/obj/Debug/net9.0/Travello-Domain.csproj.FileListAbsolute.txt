@@ -10,3 +10,16 @@ E:\Full-Stack DOTNET\Travello - Backend\Travello-Domain\obj\Debug\net9.0\Travell
 E:\Full-Stack DOTNET\Travello - Backend\Travello-Domain\obj\Debug\net9.0\refint\Travello-Domain.dll
 E:\Full-Stack DOTNET\Travello - Backend\Travello-Domain\obj\Debug\net9.0\Travello-Domain.pdb
 E:\Full-Stack DOTNET\Travello - Backend\Travello-Domain\obj\Debug\net9.0\ref\Travello-Domain.dll
+D:\Iti_9_month_Dot_Net_CRM\Graduation Project\Travello\Travello-API\Travello-Domain\bin\Debug\net9.0\Travello-Domain.deps.json
+D:\Iti_9_month_Dot_Net_CRM\Graduation Project\Travello\Travello-API\Travello-Domain\bin\Debug\net9.0\Travello-Domain.dll
+D:\Iti_9_month_Dot_Net_CRM\Graduation Project\Travello\Travello-API\Travello-Domain\bin\Debug\net9.0\Travello-Domain.pdb
+D:\Iti_9_month_Dot_Net_CRM\Graduation Project\Travello\Travello-API\Travello-Domain\obj\Debug\net9.0\Travello-Domain.csproj.AssemblyReference.cache
+D:\Iti_9_month_Dot_Net_CRM\Graduation Project\Travello\Travello-API\Travello-Domain\obj\Debug\net9.0\Travello-Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Iti_9_month_Dot_Net_CRM\Graduation Project\Travello\Travello-API\Travello-Domain\obj\Debug\net9.0\Travello-Domain.AssemblyInfoInputs.cache
+D:\Iti_9_month_Dot_Net_CRM\Graduation Project\Travello\Travello-API\Travello-Domain\obj\Debug\net9.0\Travello-Domain.AssemblyInfo.cs
+D:\Iti_9_month_Dot_Net_CRM\Graduation Project\Travello\Travello-API\Travello-Domain\obj\Debug\net9.0\Travello-Domain.csproj.CoreCompileInputs.cache
+D:\Iti_9_month_Dot_Net_CRM\Graduation Project\Travello\Travello-API\Travello-Domain\obj\Debug\net9.0\Travello-Domain.sourcelink.json
+D:\Iti_9_month_Dot_Net_CRM\Graduation Project\Travello\Travello-API\Travello-Domain\obj\Debug\net9.0\Travello-Domain.dll
+D:\Iti_9_month_Dot_Net_CRM\Graduation Project\Travello\Travello-API\Travello-Domain\obj\Debug\net9.0\refint\Travello-Domain.dll
+D:\Iti_9_month_Dot_Net_CRM\Graduation Project\Travello\Travello-API\Travello-Domain\obj\Debug\net9.0\Travello-Domain.pdb
+D:\Iti_9_month_Dot_Net_CRM\Graduation Project\Travello\Travello-API\Travello-Domain\obj\Debug\net9.0\ref\Travello-Domain.dll

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello\\Travello.csproj": {}
+    "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello\\Travello.csproj": {}
   },
   "projects": {
-    "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-Domain\\Travello-Domain.csproj": {
+    "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\Travello-Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-Domain\\Travello-Domain.csproj",
+        "projectUniqueName": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\Travello-Domain.csproj",
         "projectName": "Travello-Domain",
-        "projectPath": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-Domain\\Travello-Domain.csproj",
-        "packagesPath": "C:\\Users\\hanya\\.nuget\\packages\\",
-        "outputPath": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-Domain\\obj\\",
+        "projectPath": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\Travello-Domain.csproj",
+        "packagesPath": "C:\\Users\\mosta\\.nuget\\packages\\",
+        "outputPath": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mosta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -71,24 +71,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-Infrastructure\\Travello-Infrastructure.csproj": {
+    "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Infrastructure\\Travello-Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-Infrastructure\\Travello-Infrastructure.csproj",
+        "projectUniqueName": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Infrastructure\\Travello-Infrastructure.csproj",
         "projectName": "Travello-Infrastructure",
-        "projectPath": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-Infrastructure\\Travello-Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\hanya\\.nuget\\packages\\",
-        "outputPath": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-Infrastructure\\obj\\",
+        "projectPath": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Infrastructure\\Travello-Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\mosta\\.nuget\\packages\\",
+        "outputPath": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mosta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -103,8 +103,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-Domain\\Travello-Domain.csproj": {
-                "projectPath": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-Domain\\Travello-Domain.csproj"
+              "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\Travello-Domain.csproj": {
+                "projectPath": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\Travello-Domain.csproj"
               }
             }
           }
@@ -119,7 +119,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -162,24 +162,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello\\Travello.csproj": {
+    "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello\\Travello.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello\\Travello.csproj",
+        "projectUniqueName": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello\\Travello.csproj",
         "projectName": "Travello",
-        "projectPath": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello\\Travello.csproj",
-        "packagesPath": "C:\\Users\\hanya\\.nuget\\packages\\",
-        "outputPath": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello\\obj\\",
+        "projectPath": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello\\Travello.csproj",
+        "packagesPath": "C:\\Users\\mosta\\.nuget\\packages\\",
+        "outputPath": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mosta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -194,8 +194,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-Infrastructure\\Travello-Infrastructure.csproj": {
-                "projectPath": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-Infrastructure\\Travello-Infrastructure.csproj"
+              "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Infrastructure\\Travello-Infrastructure.csproj": {
+                "projectPath": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Infrastructure\\Travello-Infrastructure.csproj"
               }
             }
           }
@@ -210,7 +210,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -246,7 +246,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
