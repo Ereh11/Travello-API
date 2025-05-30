@@ -1,6 +1,7 @@
 {
   "version": 3,
   "targets": {
+
     "net9.0": {
       "Microsoft.AspNetCore.Cryptography.Internal/9.0.5": {
         "type": "package",
@@ -812,10 +813,21 @@
   "packageFolders": {
     "C:\\Users\\mosta\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+
+    "net9.0": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    "net9.0": []
+  },
+  "packageFolders": {
+    "/home/hermes/.nuget/packages/": {}
+
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+
       "projectUniqueName": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Application\\Travello-Application.csproj",
       "projectName": "Travello-Application",
       "projectPath": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Application\\Travello-Application.csproj",
@@ -829,22 +841,37 @@
         "C:\\Users\\mosta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+
+      "projectUniqueName": "/home/hermes/dev/final/Travello-API/Travello-Application/Travello-Application.csproj",
+      "projectName": "Travello-Application",
+      "projectPath": "/home/hermes/dev/final/Travello-API/Travello-Application/Travello-Application.csproj",
+      "packagesPath": "/home/hermes/.nuget/packages/",
+      "outputPath": "/home/hermes/dev/final/Travello-API/Travello-Application/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/hermes/.nuget/NuGet/NuGet.Config"
+
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+
           "projectReferences": {
             "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\Travello-Domain.csproj": {
               "projectPath": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\Travello-Domain.csproj"
             }
           }
+          "projectReferences": {}
+
         }
       },
       "warningProperties": {
@@ -857,7 +884,11 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
+
       "SdkAnalysisLevel": "9.0.300"
+
+      "SdkAnalysisLevel": "9.0.100"
+
     },
     "frameworks": {
       "net9.0": {
@@ -873,12 +904,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[9.0.4, 9.0.4]"
+          }
+        ],
+
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
+
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+
       }
     }
   }

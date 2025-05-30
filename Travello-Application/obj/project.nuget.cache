@@ -1,5 +1,6 @@
 {
   "version": 2,
+
   "dgSpecHash": "9h+PqEelPN0=",
   "success": true,
   "projectFilePath": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Application\\Travello-Application.csproj",
@@ -22,6 +23,9 @@
     "C:\\Users\\mosta\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.5\\microsoft.extensions.logging.abstractions.9.0.5.nupkg.sha512",
     "C:\\Users\\mosta\\.nuget\\packages\\microsoft.extensions.options\\9.0.5\\microsoft.extensions.options.9.0.5.nupkg.sha512",
     "C:\\Users\\mosta\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.5\\microsoft.extensions.primitives.9.0.5.nupkg.sha512"
+
+
+
   ],
   "logs": []
 }
