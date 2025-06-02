@@ -12,7 +12,7 @@ namespace Travello_Infrastructure.Persistence
         public IOfferRepository OfferRepository { get; }
         public IUserOfferRepository UserOfferRepository { get; }
         public IUserReviewRepository UserReviewRepository { get; }
-        public IBookingRepository _BookingRepository {get;}
+        public IBookingRepository BookingRepository {get;}
         public ILevelRepository LevelRepository { get; }
         public IHotelRepository HotelRepository { get; }
 
@@ -24,7 +24,7 @@ namespace Travello_Infrastructure.Persistence
             IUserReviewRepository userReviewRepository,
             ILevelRepository levelRepository,
             IHotelRepository hotelRepository,
-            IBookingRepository BookingRepository
+            IBookingRepository bookingRepository
             )
 
         {
@@ -36,7 +36,7 @@ namespace Travello_Infrastructure.Persistence
             UserReviewRepository = userReviewRepository;
             LevelRepository = levelRepository;
             HotelRepository = hotelRepository;
-            _BookingRepository = BookingRepository
+            BookingRepository = bookingRepository;
 
         }
 
