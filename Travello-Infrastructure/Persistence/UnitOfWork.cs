@@ -1,4 +1,4 @@
-﻿using Travello_Domain;
+using Travello_Domain;
 using Travello_Domain.Interfaces;
 
 namespace Travello_Infrastructure.Persistence
@@ -12,8 +12,10 @@ namespace Travello_Infrastructure.Persistence
         public IOfferRepository OfferRepository { get; }
         public IUserOfferRepository UserOfferRepository { get; }
         public IUserReviewRepository UserReviewRepository { get; }
+        public IBookingRepository BookingRepository {get;}
         public ILevelRepository LevelRepository { get; }
         public IHotelRepository HotelRepository { get; }
+
         public UnitOfWork(TravelloDbContext context,
             IUserRepository userRepository,
             IPassportRepository passportRepository,
@@ -21,8 +23,10 @@ namespace Travello_Infrastructure.Persistence
             IUserOfferRepository userOfferRepository,
             IUserReviewRepository userReviewRepository,
             ILevelRepository levelRepository,
-            IHotelRepository hotelRepository
+            IHotelRepository hotelRepository,
+            IBookingRepository bookingRepository
             )
+
         {
             _context = context;
             UserRepository = userRepository;
@@ -32,6 +36,7 @@ namespace Travello_Infrastructure.Persistence
             UserReviewRepository = userReviewRepository;
             LevelRepository = levelRepository;
             HotelRepository = hotelRepository;
+            BookingRepository = bookingRepository;
 
         }
 

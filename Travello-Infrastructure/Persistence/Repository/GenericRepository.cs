@@ -5,7 +5,7 @@ namespace Travello_Infrastructure.Persistence.Repository;
 
 public class GenericRepository<T> : IGenericRepository<T> where T : class
 {
-    private readonly TravelloDbContext _context;
+    protected readonly TravelloDbContext _context;
     public GenericRepository(TravelloDbContext context)
     {
         _context = context;
