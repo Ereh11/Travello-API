@@ -1,14 +1,12 @@
 using Travello_Infrastructure.DependencyInjection;
 using Travello_Application.DependencyInjection;
+using Travello_Infrastructure.Persistence;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
-#region Register Services
 // Infrastructure services registration
 builder.Services.AddPersistence(builder.Configuration);
-builder.Services.AddCloudinaryServices(builder.Configuration);
-// Application services registration
-builder.Services.AddApplicationServices();
-#endregion
 
 
 
