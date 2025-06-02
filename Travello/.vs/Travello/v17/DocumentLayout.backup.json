@@ -1,25 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello\\",
+  "WorkspaceRootPath": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FA91D067-81A5-4E98-B64F-FA48E077DD09}|..\\Travello-Infrastructure\\Travello-Infrastructure.csproj|d:\\iti_9_month_dot_net_crm\\graduation project\\travello\\travello-api\\travello-infrastructure\\persistence\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{674C876B-9678-4B06-B32A-E420E445A132}|Travello.csproj|e:\\full-stack dotnet\\travello - backend\\travello-api\\travello\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{674C876B-9678-4B06-B32A-E420E445A132}|Travello.csproj|solutionrelative:controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA91D067-81A5-4E98-B64F-FA48E077DD09}|..\\Travello-Infrastructure\\Travello-Infrastructure.csproj|d:\\iti_9_month_dot_net_crm\\graduation project\\travello\\travello-api\\travello-infrastructure\\persistence\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{674C876B-9678-4B06-B32A-E420E445A132}|Travello.csproj|e:\\full-stack dotnet\\travello - backend\\travello-api\\travello\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{674C876B-9678-4B06-B32A-E420E445A132}|Travello.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FA98F324-571E-4D2B-AD55-E4CBA61C9BE9}|..\\Travello-Domain\\Travello-Domain.csproj|d:\\iti_9_month_dot_net_crm\\graduation project\\travello\\travello-api\\travello-domain\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA98F324-571E-4D2B-AD55-E4CBA61C9BE9}|..\\Travello-Domain\\Travello-Domain.csproj|d:\\iti_9_month_dot_net_crm\\graduation project\\travello\\travello-api\\travello-domain\\entities\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{674C876B-9678-4B06-B32A-E420E445A132}|Travello.csproj|d:\\iti_9_month_dot_net_crm\\graduation project\\travello\\travello-api\\travello\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{674C876B-9678-4B06-B32A-E420E445A132}|Travello.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA98F324-571E-4D2B-AD55-E4CBA61C9BE9}|..\\Travello-Domain\\Travello-Domain.csproj|d:\\iti_9_month_dot_net_crm\\graduation project\\travello\\travello-api\\travello-domain\\interfaces\\iuserreviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48E5F9E1-928A-406A-B7FF-3282E0A877AB}|..\\Travello-Application\\Travello-Application.csproj|e:\\full-stack dotnet\\travello - backend\\travello-api\\travello-application\\dtos\\review\\addreviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,89 +21,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Infrastructure\\Persistence\\Repository\\UserRepository.cs",
-              "RelativeDocumentMoniker": "..\\Travello-Infrastructure\\Persistence\\Repository\\UserRepository.cs",
-              "ToolTip": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Infrastructure\\Persistence\\Repository\\UserRepository.cs*",
-              "RelativeToolTip": "..\\Travello-Infrastructure\\Persistence\\Repository\\UserRepository.cs*",
-              "ViewState": "AgIAABYAAAAAAAAAAAAYwCQAAAAMAAAAAAAAAA==",
+              "Title": "HotelController.cs",
+              "DocumentMoniker": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello\\Controllers\\HotelController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HotelController.cs",
+              "ToolTip": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello\\Controllers\\HotelController.cs",
+              "RelativeToolTip": "Controllers\\HotelController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T22:17:35.585Z",
+              "WhenOpened": "2025-06-01T12:24:55.413Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Infrastructure\\Persistence\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "..\\Travello-Infrastructure\\Persistence\\UnitOfWork.cs",
-              "ToolTip": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Infrastructure\\Persistence\\UnitOfWork.cs",
-              "RelativeToolTip": "..\\Travello-Infrastructure\\Persistence\\UnitOfWork.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T22:04:45.738Z",
+              "Title": ".gitignore",
+              "DocumentMoniker": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-01T12:22:00.897Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\Interfaces\\IUnitOfWork.cs",
-              "RelativeDocumentMoniker": "..\\Travello-Domain\\Interfaces\\IUnitOfWork.cs",
-              "ToolTip": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\Interfaces\\IUnitOfWork.cs",
-              "RelativeToolTip": "..\\Travello-Domain\\Interfaces\\IUnitOfWork.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAowAUAAAAGAAAAAAAAAA==",
+              "Title": "AddReviewDto.cs",
+              "DocumentMoniker": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello-Application\\Dtos\\Review\\AddReviewDto.cs",
+              "RelativeDocumentMoniker": "..\\Travello-Application\\Dtos\\Review\\AddReviewDto.cs",
+              "ToolTip": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello-Application\\Dtos\\Review\\AddReviewDto.cs*",
+              "RelativeToolTip": "..\\Travello-Application\\Dtos\\Review\\AddReviewDto.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T21:49:28.364Z",
+              "WhenOpened": "2025-06-01T12:21:11.742Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Level.cs",
-              "DocumentMoniker": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\Entities\\Level.cs",
-              "RelativeDocumentMoniker": "..\\Travello-Domain\\Entities\\Level.cs",
-              "ToolTip": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\Entities\\Level.cs",
-              "RelativeToolTip": "..\\Travello-Domain\\Entities\\Level.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAwA0AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-29T21:36:38.423Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IUserReviewRepository.cs",
-              "DocumentMoniker": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\Interfaces\\IUserReviewRepository.cs",
-              "RelativeDocumentMoniker": "..\\Travello-Domain\\Interfaces\\IUserReviewRepository.cs",
-              "ToolTip": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello-Domain\\Interfaces\\IUserReviewRepository.cs",
-              "RelativeToolTip": "..\\Travello-Domain\\Interfaces\\IUserReviewRepository.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-28T21:03:03.144Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Iti_9_month_Dot_Net_CRM\\Graduation Project\\Travello\\Travello-API\\Travello\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAwwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T23:04:58.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
