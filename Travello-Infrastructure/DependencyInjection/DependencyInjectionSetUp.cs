@@ -28,6 +28,7 @@ public static class DependencyInjectionSetUp
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IUserOfferRepository, UserOfferRepository>();
         services.AddScoped<IUserReviewRepository, UserReviewRepository>();
+        services.AddScoped<IBookingRepository, BookingRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
     }
     public static void AddCloudinaryServices(this IServiceCollection services,
