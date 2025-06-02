@@ -9,6 +9,7 @@
         IUserOfferRepository UserOfferRepository { get; }
         IUserReviewRepository UserReviewRepository { get; }
         ILevelRepository LevelRepository { get; }
+        IHotelRepository HotelRepository { get; }
         Task<int> SaveChangesAsync();
         void Dispose();
 

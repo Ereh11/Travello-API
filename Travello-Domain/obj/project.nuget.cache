@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "gns7A/gUfaU=",
+  "dgSpecHash": "9Qwd/VhP4JA=",
   "success": true,
-  "projectFilePath": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-Domain\\Travello-Domain.csproj",
+  "projectFilePath": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello-Domain\\Travello-Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hanya\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\9.0.5\\microsoft.aspnetcore.cryptography.internal.9.0.5.nupkg.sha512",
     "C:\\Users\\hanya\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\9.0.5\\microsoft.aspnetcore.cryptography.keyderivation.9.0.5.nupkg.sha512",
+    "C:\\Users\\hanya\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\hanya\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\9.0.5\\microsoft.aspnetcore.identity.entityframeworkcore.9.0.5.nupkg.sha512",
     "C:\\Users\\hanya\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.5\\microsoft.entityframeworkcore.9.0.5.nupkg.sha512",
     "C:\\Users\\hanya\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.5\\microsoft.entityframeworkcore.abstractions.9.0.5.nupkg.sha512",
@@ -21,7 +22,8 @@
     "C:\\Users\\hanya\\.nuget\\packages\\microsoft.extensions.logging\\9.0.5\\microsoft.extensions.logging.9.0.5.nupkg.sha512",
     "C:\\Users\\hanya\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.5\\microsoft.extensions.logging.abstractions.9.0.5.nupkg.sha512",
     "C:\\Users\\hanya\\.nuget\\packages\\microsoft.extensions.options\\9.0.5\\microsoft.extensions.options.9.0.5.nupkg.sha512",
-    "C:\\Users\\hanya\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.5\\microsoft.extensions.primitives.9.0.5.nupkg.sha512"
+    "C:\\Users\\hanya\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.5\\microsoft.extensions.primitives.9.0.5.nupkg.sha512",
+    "C:\\Users\\hanya\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
   ],
   "logs": []
 }

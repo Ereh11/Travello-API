@@ -13,13 +13,16 @@ namespace Travello_Infrastructure.Persistence
         public IUserOfferRepository UserOfferRepository { get; }
         public IUserReviewRepository UserReviewRepository { get; }
         public ILevelRepository LevelRepository { get; }
+        public IHotelRepository HotelRepository { get; }
         public UnitOfWork(TravelloDbContext context,
             IUserRepository userRepository,
             IPassportRepository passportRepository,
             IOfferRepository offerRepository,
             IUserOfferRepository userOfferRepository,
             IUserReviewRepository userReviewRepository,
-            ILevelRepository levelRepository)
+            ILevelRepository levelRepository,
+            IHotelRepository hotelRepository
+            )
         {
             _context = context;
             UserRepository = userRepository;
@@ -28,6 +31,7 @@ namespace Travello_Infrastructure.Persistence
             UserOfferRepository = userOfferRepository;
             UserReviewRepository = userReviewRepository;
             LevelRepository = levelRepository;
+            HotelRepository = hotelRepository;
 
         }
 
