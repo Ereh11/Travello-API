@@ -6,7 +6,6 @@
         // Specific Queries
         Task<Offer> GetByPromoCodeAsync(string promoCode);
         Task<IEnumerable<Offer>> GetActiveOffersAsync(DateTime currentDate);
-        Task<IEnumerable<Offer>> GetActiveOffersForUserAsync(Guid userId);
         Task<IEnumerable<Offer>> GetOffersByDiscountRangeAsync(decimal minDiscount, decimal maxDiscount);
         Task<bool> ExistsAsync(Guid offerId);
 

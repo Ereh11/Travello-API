@@ -1,6 +1,7 @@
 ﻿
 using Travello_Application.Common.Result;
 using Travello_Application.Dtos.Offer;
+using Travello_Application.Dtos.UesrOffer;
 using Travello_Application.Interfaces;
 using Travello_Domain.Interfaces;
 
@@ -16,21 +17,20 @@ namespace Travello_Application.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<GeneralResult<IEnumerable<OfferDto>>> GetActiveOffersForUserAsync(Guid userId)
+        public async Task<GeneralResult<IEnumerable<UserOfferDto>>> GetActiveOffersForUserAsync(Guid userId)
         {
-            var offers = await _unitOfWork.OfferRepository.GetActiveOffersForUserAsync(userId);
+            var offers = await _unitOfWork.UserOfferRepository.GetActiveOffersForUserAsync(userId);
 
-            var offerDtos = offers.Select(o => new OfferDto
+            var offerDtos = offers.Select(o => new UserOfferDto
             {
-                Title = o.Title,
-                DiscountValue = o.DiscountValue,
-                PromoCode = o.PromoCode,
-                StartDate = o.StartDate,
-                ExpiryDate = o.ExpiryDate,
-                DateOfActivate = o.DateOfActivate
+                UserId = o.UserId,
+                OfferId = o.OfferId,
+                DateOfActivate = o.DateOfActivate,
+                IsActive = o.IsActive
+
             }).ToList();
 
-            return new GeneralResult<IEnumerable<OfferDto>>
+            return new GeneralResult<IEnumerable<UserOfferDto>>
             {
                 Success = true,
                 Message = "Active offers retrieved successfully",
@@ -40,7 +40,7 @@ namespace Travello_Application.Services
 
         public async Task<GeneralResult> ActivateOfferAsync(Guid userId, Guid offerId)
         {
-            var offer = await _unitOfWork.OfferRepository.GetOfferByIdAsync(offerId, userId);
+            var offer = await _unitOfWork.UserOfferRepository.GetByIdAsync(offerId, userId);
 
             if (offer == null)
             {
@@ -52,7 +52,7 @@ namespace Travello_Application.Services
             }
 
             offer.DateOfActivate = DateTime.UtcNow;
-            await _unitOfWork.OfferRepository.AddAsync(offer);
+            await _unitOfWork.UserOfferRepository.AddAsync(offer);
             await _unitOfWork.SaveChangesAsync();
 
             return new GeneralResult
@@ -61,5 +61,7 @@ namespace Travello_Application.Services
                 Message = "Offer activated successfully"
             };
         }
+
+       
     }
 }

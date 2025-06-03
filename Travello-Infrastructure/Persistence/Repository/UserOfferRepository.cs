@@ -45,5 +45,13 @@ namespace Travello_Infrastructure.Persistence.Repository
         {
             return await _context.UserOffers.AnyAsync(uo => uo.UserId == userId && uo.OfferId == offerId);
         }
+
+        public async Task<IEnumerable<UserOffer>> GetActiveOffersForUserAsync(Guid userId)
+        {
+            return await _context.UserOffers
+                .Where(uo => uo.UserId == userId && uo.IsActive)
+                .ToListAsync();
+
+        }
     }
 }
