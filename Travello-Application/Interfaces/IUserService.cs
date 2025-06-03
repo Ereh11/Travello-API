@@ -1,12 +1,16 @@
-﻿using Travello_Application.Dtos.Passport;
+﻿using Microsoft.AspNetCore.Http;
+using Travello_Application.Common.Result;
+using Travello_Application.Dtos.Passport;
 using Travello_Application.Dtos.UserProfile;
 
 namespace Travello_Application.Interfaces
 {
     public interface IUserService
     {
-        Task<AddUserProfileDto> GetUserProfileAsync(Guid userId);
-        Task UpdateUserProfileAsync(Guid userId, UpdateUserProfileDto dto);
-        Task UpdatePassportAsync(Guid userId, UpdatePassportDto dto);
+        Task<GeneralResult<ReadUserProfileDto>> GetUserProfileAsync(Guid userId);
+        Task<GeneralResult> UpdateUserProfileAsync(Guid userId, UpdateUserProfileDto dto);
+        Task<GeneralResult> UpdatePassportAsync(Guid userId, UpdatePassportDto dto);
+        Task<GeneralResult<string>> UpdateProfileImageAsync(Guid userId, IFormFile file);
+
     }
 }

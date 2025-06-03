@@ -1,10 +1,13 @@
-﻿using Travello_Domain;
+﻿using Travello_Application.Common.Result;
+using Travello_Application.Dtos.Offer;
+using Travello_Application.Dtos.UesrOffer;
 
 namespace Travello_Application.Interfaces
 {
     public interface IOfferService
     {
-        Task ActivateOfferAsync(Guid userId, Guid offerId);
-        Task<IEnumerable<Offer>> GetActiveOffersForUserAsync(Guid userId);
+        Task<GeneralResult<IEnumerable<UserOfferDto>>> GetActiveOffersForUserAsync(Guid userId);
+        Task<GeneralResult> ActivateOfferAsync(Guid userId, Guid offerId);
+
     }
 }

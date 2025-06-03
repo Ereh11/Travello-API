@@ -32,9 +32,10 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class
         var T = await GetByIdAsync(id);
         if (T != null) _context.Set<T>().Remove(T);
     }
-    public void Update(T entity)
-    {
-    }
 
-   
+    public Task UpdateAsync(T entity)
+    {
+        _context.Set<T>().Update(entity);
+        return Task.CompletedTask;
+    }
 }

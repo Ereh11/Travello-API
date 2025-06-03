@@ -1,6 +1,10 @@
-﻿using Travello_Application.Interfaces;
-using Travello_Domain;
+﻿
+using Travello_Application.Common.Result;
+using Travello_Application.Dtos.Offer;
+using Travello_Application.Dtos.UesrOffer;
+using Travello_Application.Interfaces;
 using Travello_Domain.Interfaces;
+
 
 namespace Travello_Application.Services
 {
@@ -13,27 +17,51 @@ namespace Travello_Application.Services
             _unitOfWork = unitOfWork;
         }
 
-        public async Task ActivateOfferAsync(Guid userId, Guid offerId)
+        public async Task<GeneralResult<IEnumerable<UserOfferDto>>> GetActiveOffersForUserAsync(Guid userId)
         {
-            if (!await _unitOfWork.OfferRepository.ExistsAsync(offerId))
-                throw new Exception("Offer not found");
+            var offers = await _unitOfWork.UserOfferRepository.GetActiveOffersForUserAsync(userId);
 
-            var userOffer = new UserOffer
+            var offerDtos = offers.Select(o => new UserOfferDto
             {
-                UserId = userId,
-                OfferId = offerId,
-                DateOfActivate = DateTime.UtcNow,
-                IsActive = true
+                UserId = o.UserId,
+                OfferId = o.OfferId,
+                DateOfActivate = o.DateOfActivate,
+                IsActive = o.IsActive
+
+            }).ToList();
+
+            return new GeneralResult<IEnumerable<UserOfferDto>>
+            {
+                Success = true,
+                Message = "Active offers retrieved successfully",
+                Data = offerDtos
             };
-
-            await _unitOfWork.UserOfferRepository.AddAsync(userOffer);
-            await _unitOfWork.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<Offer>> GetActiveOffersForUserAsync(Guid userId)
+        public async Task<GeneralResult> ActivateOfferAsync(Guid userId, Guid offerId)
         {
-            var userOffers = await _unitOfWork.UserOfferRepository.GetActiveUserOffersAsync(userId);
-            return userOffers.Select(uo => uo.Offer);
+            var offer = await _unitOfWork.UserOfferRepository.GetByIdAsync(offerId, userId);
+
+            if (offer == null)
+            {
+                return new GeneralResult
+                {
+                    Success = false,
+                    Message = "Offer not found or not associated with user"
+                };
+            }
+
+            offer.DateOfActivate = DateTime.UtcNow;
+            await _unitOfWork.UserOfferRepository.AddAsync(offer);
+            await _unitOfWork.SaveChangesAsync();
+
+            return new GeneralResult
+            {
+                Success = true,
+                Message = "Offer activated successfully"
+            };
         }
+
+       
     }
 }

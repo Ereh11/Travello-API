@@ -9,6 +9,8 @@
         Task<IEnumerable<UserOffer>> GetActiveUserOffersAsync(Guid userId);
         Task<IEnumerable<UserOffer>> GetUserOffersByOfferIdAsync(Guid offerId);
         Task<bool> ExistsAsync(Guid userId, Guid offerId);
+        Task<IEnumerable<UserOffer>> GetActiveOffersForUserAsync(Guid userId);
+
 
 
     }

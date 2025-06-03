@@ -1,1 +1,68 @@
-.vs/
+# Build outputs
+**/bin/
+**/obj/
+
+# User-specific files
+*.user
+*.suo
+*.csproj.user
+
+# VS Code settings
+.vscode/
+.vscode/settings.json
+
+# JetBrains Rider settings
+.idea/
+
+# Visual Studio settings
+*.vs/
+
+# NuGet-related files
+project.nuget.cache
+*.nuget.g.props
+*.nuget.g.targets
+*.nuget.dgspec.json
+packages/
+
+# Log files
+*.log
+
+# Backup & temp files
+*.bak
+*.swp
+*.tmp
+*.temp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Environment-specific or sensitive files
+*.env
+.env.*
+projectsettings.json
+secrets.json
+
+# Build artifacts
+build/
+publish/
+dist/
+out/
+
+# ASP.NET Identity database (if using localdb)
+*.mdf
+*.ldf
+
+# Optional: If you're using local SQLite for dev
+*.db
+*.sqlite
+
+# ReSharper / Rider settings (if used)
+_ReSharper.*
+*.DotSettings.user
+
+# Uncomment if you're using test result output
+# TestResults/
+# coverage/

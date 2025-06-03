@@ -1,4 +1,5 @@
-﻿using Travello_Application.Dtos.Review;
+﻿using Travello_Application.Common.Result;
+using Travello_Application.Dtos.Review;
 using Travello_Application.Interfaces;
 using Travello_Domain;
 using Travello_Domain.Interfaces;
@@ -12,26 +13,45 @@ public class ReviewService : IReviewService
         _unitOfWork = unitOfWork;
     }
 
-    public async Task CreateReviewAsync(Guid userId, AddReviewDto dto)
-    {
-        if (await _unitOfWork.UserReviewRepository.ExistsAsync(userId, dto.HotelId))
-            throw new Exception("Review already exists");
 
+    public async Task<GeneralResult> CreateReviewAsync(Guid userId, AddReviewDto dto)
+    {
         var review = new UserReview
         {
             UserId = userId,
             HotelId = dto.HotelId,
-            CreatedAt = DateTime.UtcNow,
             Comment = dto.Comment,
-            Rating = dto.Rating
+            Rating = dto.Rating,
+            CreatedAt = DateTime.UtcNow,
+            UpdatedAt = DateTime.UtcNow
         };
 
         await _unitOfWork.UserReviewRepository.AddAsync(review);
         await _unitOfWork.SaveChangesAsync();
+
+        return new GeneralResult
+        {
+            Success = true,
+            Message = "Review created successfully"
+        };
     }
 
-    public async Task<IEnumerable<UserReview>> GetReviewsByUserAsync(Guid userId)
+    public async Task<GeneralResult<AddReviewDto>> GetReviewsByUserAsync(Guid userId)
     {
-        return await _unitOfWork.UserReviewRepository.GetReviewsByUserIdAsync(userId);
+        var reviews = await _unitOfWork.UserReviewRepository.GetReviewsByUserIdAsync(userId);
+
+        var reviewDtos = reviews.Select(review => new AddReviewDto
+        {
+            HotelId = review.HotelId,
+            Comment = review.Comment,
+            Rating = review.Rating
+        }).ToList();
+
+        return new GeneralResult<AddReviewDto>
+        {
+            Success = true,
+            Message = "User reviews retrieved successfully",
+            Data = reviewDtos.FirstOrDefault() 
+        };
     }
 }
