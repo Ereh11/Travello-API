@@ -1,0 +1,36 @@
+# Ignore build outputs and intermediate files
+obj/
+bin/
+
+# User-specific files
+*.user
+*.suo
+*.csproj.user
+
+# Logs
+*.log
+
+# IDE-specific settings (e.g., Visual Studio, Rider)
+.vscode/
+.idea/
+*.vs/
+
+# Package restore data
+project.nuget.cache
+*.nuget.g.props
+*.nuget.g.targets
+*.nuget.dgspec.json
+
+# Backup files
+*.bak
+*.swp
+*.tmp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# env
+projectsettings.json
+
+
