@@ -20,4 +20,5 @@ public class Accommodation
     public Hotel Hotel { get; set; } = null!;
 
     public ICollection<Room> Rooms { get; set; } = new HashSet<Room>();
+    public ICollection<Booking> Bookings { get; set; } = new HashSet<Booking>();
 }
