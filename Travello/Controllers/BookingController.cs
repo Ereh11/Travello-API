@@ -57,4 +57,18 @@ public class BookingController : ControllerBase
             )
         );
     }
+
+    [HttpPost("cancel")]
+    public async Task<IActionResult> CancelBooking(CancelBookingDto dto)
+    {
+        try
+        {
+            await _bookingService.CancelBookingAsync(dto.BookingId, "User requested cancellation");
+            return Ok(new { Success = true, Message = "Booking cancelled" });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { Success = false, ex.Message });
+        }
+    }
 }

@@ -1,6 +1,4 @@
 using Travello_Application;
-using Travello_Domain;
-using Travello_Domain.Interfaces;
 
 public interface IBookingService
 {
@@ -9,7 +7,5 @@ public interface IBookingService
         Guid userId,
         BookingHistoryFilterDto? filter = null
     );
-
-    // Task<BookingAvailabilityDto> CheckAvailabilityAsync(BookingAvailabilityDto dto);
-    // Task ProcessRefundAsync(RefundRequestDto dto);
+    Task CancelBookingAsync(Guid bookingId, string reason);
 }

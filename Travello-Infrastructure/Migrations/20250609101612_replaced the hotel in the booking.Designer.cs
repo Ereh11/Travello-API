@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Travello_Infrastructure.Persistence;
 
@@ -11,9 +12,11 @@ using Travello_Infrastructure.Persistence;
 namespace Travello_Infrastructure.Migrations
 {
     [DbContext(typeof(TravelloDbContext))]
-    partial class TravelloDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250609101612_replaced the hotel in the booking")]
+    partial class replacedthehotelinthebooking
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
