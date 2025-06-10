@@ -1,7 +1,24 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{48E5F9E1-928A-406A-B7FF-3282E0A877AB}|..\\Travello-Application\\Travello-Application.csproj|e:\\full-stack dotnet\\travello - backend\\travello-api\\travello-application\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48E5F9E1-928A-406A-B7FF-3282E0A877AB}|..\\Travello-Application\\Travello-Application.csproj|e:\\full-stack dotnet\\travello - backend\\travello-api\\travello-application\\dtos\\hotel\\viewhoteldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48E5F9E1-928A-406A-B7FF-3282E0A877AB}|..\\Travello-Application\\Travello-Application.csproj|e:\\full-stack dotnet\\travello - backend\\travello-api\\travello-application\\dtos\\hotelimage\\viewhotelimageforhoteldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA91D067-81A5-4E98-B64F-FA48E077DD09}|..\\Travello-Infrastructure\\Travello-Infrastructure.csproj|e:\\full-stack dotnet\\travello - backend\\travello-api\\travello-infrastructure\\persistence\\repository\\hotelrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{674C876B-9678-4B06-B32A-E420E445A132}|Travello.csproj|e:\\full-stack dotnet\\travello - backend\\travello-api\\travello\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{674C876B-9678-4B06-B32A-E420E445A132}|Travello.csproj|solutionrelative:controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +26,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ViewHotelImageForHotelDto.cs",
+              "DocumentMoniker": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello-Application\\Dtos\\HotelImage\\ViewHotelImageForHotelDto.cs",
+              "RelativeDocumentMoniker": "..\\Travello-Application\\Dtos\\HotelImage\\ViewHotelImageForHotelDto.cs",
+              "ToolTip": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello-Application\\Dtos\\HotelImage\\ViewHotelImageForHotelDto.cs",
+              "RelativeToolTip": "..\\Travello-Application\\Dtos\\HotelImage\\ViewHotelImageForHotelDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T17:24:56.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HotelService.cs",
+              "DocumentMoniker": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello-Application\\Services\\HotelService.cs",
+              "RelativeDocumentMoniker": "..\\Travello-Application\\Services\\HotelService.cs",
+              "ToolTip": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello-Application\\Services\\HotelService.cs",
+              "RelativeToolTip": "..\\Travello-Application\\Services\\HotelService.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAwwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T17:23:45.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HotelRepository.cs",
+              "DocumentMoniker": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello-Infrastructure\\Persistence\\Repository\\HotelRepository.cs",
+              "RelativeDocumentMoniker": "..\\Travello-Infrastructure\\Persistence\\Repository\\HotelRepository.cs",
+              "ToolTip": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello-Infrastructure\\Persistence\\Repository\\HotelRepository.cs",
+              "RelativeToolTip": "..\\Travello-Infrastructure\\Persistence\\Repository\\HotelRepository.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAswBMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T17:22:41.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViewHotelDto.cs",
+              "DocumentMoniker": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello-Application\\Dtos\\Hotel\\ViewHotelDto.cs",
+              "RelativeDocumentMoniker": "..\\Travello-Application\\Dtos\\Hotel\\ViewHotelDto.cs",
+              "ToolTip": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello-Application\\Dtos\\Hotel\\ViewHotelDto.cs",
+              "RelativeToolTip": "..\\Travello-Application\\Dtos\\Hotel\\ViewHotelDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T17:20:08.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HotelController.cs",
+              "DocumentMoniker": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello\\Controllers\\HotelController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HotelController.cs",
+              "ToolTip": "E:\\Full-Stack DOTNET\\Travello - Backend\\Travello-API\\Travello\\Controllers\\HotelController.cs",
+              "RelativeToolTip": "Controllers\\HotelController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T15:40:28.595Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"

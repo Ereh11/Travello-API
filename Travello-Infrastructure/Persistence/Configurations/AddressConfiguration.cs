@@ -19,16 +19,13 @@ public class AddressConfiguration : IEntityTypeConfiguration<Address>
         builder.Property(a => a.City)
             .IsRequired()
             .HasMaxLength(50);
-        builder.Property(a => a.State)
-            .IsRequired()
-            .HasMaxLength(50);
         builder.Property(a => a.Country)
             .IsRequired()
             .HasMaxLength(50);
         builder.Property(a => a.ZipCode)
             .IsRequired()
             .HasMaxLength(20);
-        builder.Property(a => a.Government)
+        builder.Property(a => a.Governorate)
             .IsRequired()
             .HasMaxLength(50);
     }

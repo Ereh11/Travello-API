@@ -7,6 +7,8 @@ using Travello_Infrastructure.Persistence;
 var builder = WebApplication.CreateBuilder(args);
 // Infrastructure services registration
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddApplicationServices();
+builder.Services.AddCloudinaryServices(builder.Configuration);
 
 
 

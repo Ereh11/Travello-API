@@ -1,5 +1,4 @@
 ﻿namespace Travello_Domain;
-
 public class Hotel
 {
     public Guid HotelId { get; set; }
@@ -8,8 +7,7 @@ public class Hotel
     public int Stars { get; set; }
     public Guid AddressId { get; set; }
     public Address Address { get; set; } = null!;
-    public Guid? ImageId { get; set; }
-    public Image? Image { get; set; }
+    public ICollection<HotelImage> Images { get; set; } = new HashSet<HotelImage>();
     public ICollection<HotelFacility> HotelFacilities { get; set; } = new HashSet<HotelFacility>();
     public ICollection<UserReview> UserReviews { get; set; } = new HashSet<UserReview>();
     public ICollection<Accommodation> Accommodations { get; set; } = new HashSet<Accommodation>();

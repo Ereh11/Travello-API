@@ -196,7 +196,7 @@ namespace Travello_Infrastructure.Migrations
 
             modelBuilder.Entity("Travello_Domain.Address", b =>
                 {
-                    b.Property<Guid>("AddressID")
+                    b.Property<Guid>("AddressId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -210,12 +210,7 @@ namespace Travello_Infrastructure.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("Government")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("State")
+                    b.Property<string>("Governorate")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
@@ -230,7 +225,7 @@ namespace Travello_Infrastructure.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.HasKey("AddressID");
+                    b.HasKey("AddressId");
 
                     b.ToTable("Addresses");
                 });
@@ -312,11 +307,8 @@ namespace Travello_Infrastructure.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<Guid?>("ImageId")
-                        .HasColumnType("uniqueidentifier");
+                        .HasMaxLength(3000)
+                        .HasColumnType("nvarchar(3000)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -329,8 +321,6 @@ namespace Travello_Infrastructure.Migrations
                     b.HasKey("HotelId");
 
                     b.HasIndex("AddressId");
-
-                    b.HasIndex("ImageId");
 
                     b.ToTable("Hotels");
                 });
@@ -350,10 +340,13 @@ namespace Travello_Infrastructure.Migrations
                     b.ToTable("HotelFacilities", (string)null);
                 });
 
-            modelBuilder.Entity("Travello_Domain.Image", b =>
+            modelBuilder.Entity("Travello_Domain.HotelImage", b =>
                 {
                     b.Property<Guid>("ImageId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("HotelId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ImageURL")
@@ -361,9 +354,11 @@ namespace Travello_Infrastructure.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.HasKey("ImageId");
+                    b.HasKey("ImageId", "HotelId");
 
-                    b.ToTable("Images");
+                    b.HasIndex("HotelId");
+
+                    b.ToTable("HotelImages");
                 });
 
             modelBuilder.Entity("Travello_Domain.Level", b =>
@@ -484,6 +479,22 @@ namespace Travello_Infrastructure.Migrations
                     b.HasKey("PaymentId");
 
                     b.ToTable("Payments");
+                });
+
+            modelBuilder.Entity("Travello_Domain.ProfileImage", b =>
+                {
+                    b.Property<Guid>("ProfileImageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ImageURL")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("ProfileImageId");
+
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("Travello_Domain.Refund", b =>
@@ -802,14 +813,7 @@ namespace Travello_Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Travello_Domain.Image", "Image")
-                        .WithMany()
-                        .HasForeignKey("ImageId")
-                        .OnDelete(DeleteBehavior.SetNull);
-
                     b.Navigation("Address");
-
-                    b.Navigation("Image");
                 });
 
             modelBuilder.Entity("Travello_Domain.HotelFacility", b =>
@@ -831,9 +835,20 @@ namespace Travello_Infrastructure.Migrations
                     b.Navigation("Hotel");
                 });
 
+            modelBuilder.Entity("Travello_Domain.HotelImage", b =>
+                {
+                    b.HasOne("Travello_Domain.Hotel", "Hotel")
+                        .WithMany("Images")
+                        .HasForeignKey("HotelId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Hotel");
+                });
+
             modelBuilder.Entity("Travello_Domain.Offer", b =>
                 {
-                    b.HasOne("Travello_Domain.Image", "Image")
+                    b.HasOne("Travello_Domain.ProfileImage", "Image")
                         .WithMany()
                         .HasForeignKey("ImageId")
                         .OnDelete(DeleteBehavior.SetNull);
@@ -887,7 +902,7 @@ namespace Travello_Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Travello_Domain.Image", "ProfileImage")
+                    b.HasOne("Travello_Domain.ProfileImage", "ProfileImage")
                         .WithOne()
                         .HasForeignKey("Travello_Domain.User", "ProfileImageId")
                         .OnDelete(DeleteBehavior.SetNull);
@@ -959,6 +974,8 @@ namespace Travello_Infrastructure.Migrations
                     b.Navigation("Bookings");
 
                     b.Navigation("HotelFacilities");
+
+                    b.Navigation("Images");
 
                     b.Navigation("UserReviews");
                 });

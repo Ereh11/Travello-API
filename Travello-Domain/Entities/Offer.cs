@@ -16,7 +16,7 @@ namespace Travello_Domain
         public DateTime StartDate { get; set; }
 
         public Guid? ImageId { get; set; }
-        public Image? Image { get; set; } = null!;
+        public ProfileImage? Image { get; set; } = null!;
         public ICollection<UserOffer> UserOffers { get; set; } = new HashSet<UserOffer>();
     }
 }

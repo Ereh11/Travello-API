@@ -20,7 +20,9 @@ public static class DependencyInjectionSetUp
         {
             options.UseSqlServer(connectionString);
         });
-        services.AddScoped<IImageRepository, CloudinaryImageService>();
+        services.AddScoped<IProfileImageRepository, ProfileImageRepository>();
+        services.AddScoped<IHotelImageRepository, HotelImageRepository>();
+        services.AddScoped<IAttachment, CloudinaryImageRepository>();
         services.AddScoped<IHotelRepository, HotelRepository>();
         services.AddScoped<ILevelRepository, LevelRepository>();
         services.AddScoped<IOfferRepository, OfferRepository>();
@@ -29,6 +31,7 @@ public static class DependencyInjectionSetUp
         services.AddScoped<IUserOfferRepository, UserOfferRepository>();
         services.AddScoped<IUserReviewRepository, UserReviewRepository>();
         services.AddScoped<IBookingRepository, BookingRepository>();
+        services.AddScoped<IAddressRepository, AddressRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
     }
     public static void AddCloudinaryServices(this IServiceCollection services,

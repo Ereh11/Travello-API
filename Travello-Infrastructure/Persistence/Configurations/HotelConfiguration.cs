@@ -18,7 +18,7 @@ public class HotelConfiguratio : IEntityTypeConfiguration<Hotel>
             .HasMaxLength(100);
         builder.Property(h => h.Description)
             .IsRequired()
-            .HasMaxLength(500);
+            .HasMaxLength(3000);
         builder.Property(h => h.Stars)
             .IsRequired();
         // Relationships
@@ -26,10 +26,10 @@ public class HotelConfiguratio : IEntityTypeConfiguration<Hotel>
             .WithMany()
             .HasForeignKey(h => h.AddressId)
             .OnDelete(DeleteBehavior.Cascade);
-        builder.HasOne(h => h.Image)
-            .WithMany()
-            .HasForeignKey(h => h.ImageId)
-            .OnDelete(DeleteBehavior.SetNull);
+        builder.HasMany(h => h.Images)
+            .WithOne(i => i.Hotel)
+            .HasForeignKey(i => i.HotelId)
+            .OnDelete(DeleteBehavior.Cascade);
         builder.HasMany(h => h.HotelFacilities)
             .WithOne(hf => hf.Hotel)
             .HasForeignKey(hf => hf.HotelId)

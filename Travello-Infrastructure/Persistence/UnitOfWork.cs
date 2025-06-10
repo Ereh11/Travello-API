@@ -15,6 +15,11 @@ namespace Travello_Infrastructure.Persistence
         public IBookingRepository BookingRepository {get;}
         public ILevelRepository LevelRepository { get; }
         public IHotelRepository HotelRepository { get; }
+        public IAddressRepository AddressRepository { get; }
+
+        public IAttachment Attachment { get; }
+        public IProfileImageRepository ProfileImageRepository { get; }
+        public IHotelImageRepository HotelImageRepository { get; }
 
         public UnitOfWork(TravelloDbContext context,
             IUserRepository userRepository,
@@ -24,7 +29,12 @@ namespace Travello_Infrastructure.Persistence
             IUserReviewRepository userReviewRepository,
             ILevelRepository levelRepository,
             IHotelRepository hotelRepository,
-            IBookingRepository bookingRepository
+            IBookingRepository bookingRepository,
+            IAddressRepository addressRepository,
+            IHotelImageRepository hotelImageRepository,
+            IProfileImageRepository profileImageRepository,
+            IAttachment attachment
+
             )
 
         {
@@ -37,7 +47,10 @@ namespace Travello_Infrastructure.Persistence
             LevelRepository = levelRepository;
             HotelRepository = hotelRepository;
             BookingRepository = bookingRepository;
-
+            AddressRepository = addressRepository;
+            HotelImageRepository = hotelImageRepository;
+            ProfileImageRepository = profileImageRepository;
+            Attachment = attachment;
         }
 
         

@@ -10,6 +10,10 @@
         IUserReviewRepository UserReviewRepository { get; }
         ILevelRepository LevelRepository { get; }
         IHotelRepository HotelRepository { get; }
+        IAddressRepository AddressRepository { get; }
+        IHotelImageRepository HotelImageRepository { get; }
+        IProfileImageRepository ProfileImageRepository { get; }
+        IAttachment Attachment { get; }
         Task<int> SaveChangesAsync();
         void Dispose();
 

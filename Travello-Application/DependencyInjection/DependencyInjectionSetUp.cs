@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
 using Travello_Application.Interfaces;
 using Travello_Application.Services;
 using Travello_Application.Validators;
@@ -14,7 +15,10 @@ public static class DependencyInjectionSetUp
         services.AddScoped<IOfferService, OfferService>();
         services.AddScoped<IReviewService, ReviewService>();
         services.AddScoped<IBookingService, BookingService>();
-        services.AddScoped<AddHotelDtoValidator>();
-
+        services.AddScoped<IAddressService, AddressService>();
+        services.AddScoped<IHotelImageService, HotelImageService>();
+        services.AddValidatorsFromAssembly(
+            typeof(DependencyInjectionSetUp).Assembly
+            );
     }
 }
