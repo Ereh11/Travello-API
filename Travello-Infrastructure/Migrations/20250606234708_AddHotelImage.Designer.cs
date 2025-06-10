@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Travello_Infrastructure.Persistence;
 
@@ -11,9 +12,11 @@ using Travello_Infrastructure.Persistence;
 namespace Travello_Infrastructure.Migrations
 {
     [DbContext(typeof(TravelloDbContext))]
-    partial class TravelloDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250606234708_AddHotelImage")]
+    partial class AddHotelImage
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -236,16 +239,13 @@ namespace Travello_Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("AccommodationId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<DateTime>("CheckInDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("CheckOutDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid?>("HotelId")
+                    b.Property<Guid>("HotelId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("NumberOfGuests")
@@ -261,8 +261,6 @@ namespace Travello_Infrastructure.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("BookingId");
-
-                    b.HasIndex("AccommodationId");
 
                     b.HasIndex("HotelId");
 
@@ -345,25 +343,29 @@ namespace Travello_Infrastructure.Migrations
                     b.ToTable("HotelFacilities", (string)null);
                 });
 
-            modelBuilder.Entity("Travello_Domain.HotelImage", b =>
+            modelBuilder.Entity("Travello_Domain.Image", b =>
                 {
                     b.Property<Guid>("ImageId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("HotelId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(13)
+                        .HasColumnType("nvarchar(13)");
 
                     b.Property<string>("ImageURL")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.HasKey("ImageId", "HotelId");
+                    b.HasKey("ImageId");
 
-                    b.HasIndex("HotelId");
+                    b.ToTable("Images");
 
-                    b.ToTable("HotelImages");
+                    b.HasDiscriminator().HasValue("Image");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Travello_Domain.Level", b =>
@@ -476,9 +478,6 @@ namespace Travello_Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
                     b.Property<string>("TransactionID")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -487,22 +486,6 @@ namespace Travello_Infrastructure.Migrations
                     b.HasKey("PaymentId");
 
                     b.ToTable("Payments");
-                });
-
-            modelBuilder.Entity("Travello_Domain.ProfileImage", b =>
-                {
-                    b.Property<Guid>("ProfileImageId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("ImageURL")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.HasKey("ProfileImageId");
-
-                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("Travello_Domain.Refund", b =>
@@ -724,6 +707,18 @@ namespace Travello_Infrastructure.Migrations
                     b.ToTable("UserReviews");
                 });
 
+            modelBuilder.Entity("Travello_Domain.HotelImage", b =>
+                {
+                    b.HasBaseType("Travello_Domain.Image");
+
+                    b.Property<Guid>("HotelId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasIndex("HotelId");
+
+                    b.HasDiscriminator().HasValue("HotelImage");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", null)
@@ -788,15 +783,11 @@ namespace Travello_Infrastructure.Migrations
 
             modelBuilder.Entity("Travello_Domain.Booking", b =>
                 {
-                    b.HasOne("Travello_Domain.Accommodation", "Accommodation")
+                    b.HasOne("Travello_Domain.Hotel", "Hotel")
                         .WithMany("Bookings")
-                        .HasForeignKey("AccommodationId")
+                        .HasForeignKey("HotelId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
-
-                    b.HasOne("Travello_Domain.Hotel", null)
-                        .WithMany("Bookings")
-                        .HasForeignKey("HotelId");
 
                     b.HasOne("Travello_Domain.Payment", "Payment")
                         .WithOne()
@@ -810,7 +801,7 @@ namespace Travello_Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Accommodation");
+                    b.Navigation("Hotel");
 
                     b.Navigation("Payment");
 
@@ -847,20 +838,9 @@ namespace Travello_Infrastructure.Migrations
                     b.Navigation("Hotel");
                 });
 
-            modelBuilder.Entity("Travello_Domain.HotelImage", b =>
-                {
-                    b.HasOne("Travello_Domain.Hotel", "Hotel")
-                        .WithMany("Images")
-                        .HasForeignKey("HotelId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
-
-                    b.Navigation("Hotel");
-                });
-
             modelBuilder.Entity("Travello_Domain.Offer", b =>
                 {
-                    b.HasOne("Travello_Domain.ProfileImage", "Image")
+                    b.HasOne("Travello_Domain.Image", "Image")
                         .WithMany()
                         .HasForeignKey("ImageId")
                         .OnDelete(DeleteBehavior.SetNull);
@@ -914,7 +894,7 @@ namespace Travello_Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Travello_Domain.ProfileImage", "ProfileImage")
+                    b.HasOne("Travello_Domain.Image", "ProfileImage")
                         .WithOne()
                         .HasForeignKey("Travello_Domain.User", "ProfileImageId")
                         .OnDelete(DeleteBehavior.SetNull);
@@ -964,10 +944,19 @@ namespace Travello_Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Travello_Domain.HotelImage", b =>
+                {
+                    b.HasOne("Travello_Domain.Hotel", "Hotel")
+                        .WithMany("Images")
+                        .HasForeignKey("HotelId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Hotel");
+                });
+
             modelBuilder.Entity("Travello_Domain.Accommodation", b =>
                 {
-                    b.Navigation("Bookings");
-
                     b.Navigation("Rooms");
                 });
 

@@ -13,6 +13,15 @@ public class GeneralResult
             Message = message,
         };
     }
+    public static GeneralResult MappingErrorResult(string message, List<ResultError>? errors = null)
+    {
+        return new GeneralResult
+        {
+            Success = false,
+            Message = message,
+            Errors = errors
+        };
+    }
 
 
 }
@@ -26,6 +35,15 @@ public class GeneralResult<T> : GeneralResult
             Success = true,
             Message = message,
             Data = data
+        };
+    }
+    public new static GeneralResult<T> MappingErrorResult(string message, List<ResultError>? errors = null)
+    {
+        return new GeneralResult<T>
+        {
+            Success = false,
+            Message = message,
+            Errors = errors
         };
     }
 }

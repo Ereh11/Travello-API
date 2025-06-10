@@ -17,7 +17,7 @@ public class AddHotelDtoValidator : AbstractValidator<AddHotelDto>
             .MaximumLength(100).WithMessage("Hotel name must not exceed 100 characters.");
         RuleFor(h => h.Description)
             .NotEmpty().WithMessage("Hotel description is required.")
-            .MaximumLength(500).WithMessage("Hotel description must not exceed 500 characters.");
+            .MaximumLength(3000).WithMessage("Hotel description must not exceed 3000 characters.");
         RuleFor(h => h.Stars)
             .InclusiveBetween(1, 5).WithMessage("Stars must be between 1 and 5.");
         RuleFor(h => h.AddressId)

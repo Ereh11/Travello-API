@@ -12,7 +12,7 @@ namespace Travello_Domain
         public Guid? PassportId { get; set; }
         public Passport? Passport { get; set; } = null!;
         public Guid? ProfileImageId { get; set; }
-        public Image? ProfileImage { get; set; } = null!;
+        public ProfileImage? ProfileImage { get; set; } = null!;
         public Guid? AddressId { get; set; }
         public Address? Address { get; set; } = null!;
         public Guid LevelId { get; set; }

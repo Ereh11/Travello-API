@@ -8,7 +8,7 @@ namespace Travello_Infrastructure.Persistence;
 public class TravelloDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid, IdentityUserClaim<Guid>, IdentityUserRole<Guid>, IdentityUserLogin<Guid>, IdentityRoleClaim<Guid>, IdentityUserToken<Guid>>
 {
     public DbSet<Passport> Passports { get; set; }
-    public DbSet<Image> Images { get; set; }
+    public DbSet<HotelImage> HotelImages { get; set; }
     public DbSet<Address> Addresses { get; set; }
     public DbSet<Level> Levels { get; set; }
     public DbSet<Offer> Offers { get; set; }
@@ -22,6 +22,8 @@ public class TravelloDbContext : IdentityDbContext<User, IdentityRole<Guid>, Gui
     public DbSet<Hotel> Hotels { get; set; }
     public DbSet<Payment> Payments { get; set; }
     public DbSet<Refund> Refunds { get; set; }
+
+    public DbSet<ProfileImage> Images { get; set; }
     public TravelloDbContext(DbContextOptions<TravelloDbContext> options)
         : base(options)
     {

@@ -9,9 +9,9 @@ using Travello_Domain;
 
 namespace Travello_Infrastructure.Persistence;
 
-public class ImageConfiguration : IEntityTypeConfiguration<Image>
+public class ProfileImageConfiguration : IEntityTypeConfiguration<ProfileImage>
 {
-    public void Configure(EntityTypeBuilder<Image> builder)
+    public void Configure(EntityTypeBuilder<ProfileImage> builder)
     {
        builder.Property(i => i.ImageURL)
             .IsRequired()

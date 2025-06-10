@@ -21,7 +21,9 @@ public static class DependencyInjectionSetUp
         {
             options.UseSqlServer(connectionString);
         });
-        services.AddScoped<IImageRepository, CloudinaryImageService>();
+        services.AddScoped<IProfileImageRepository, ProfileImageRepository>();
+        services.AddScoped<IHotelImageRepository, HotelImageRepository>();
+        services.AddScoped<IAttachment, CloudinaryImageRepository>();
         services.AddScoped<IHotelRepository, HotelRepository>();
         services.AddScoped<ILevelRepository, LevelRepository>();
         services.AddScoped<IOfferRepository, OfferRepository>();
@@ -30,10 +32,14 @@ public static class DependencyInjectionSetUp
         services.AddScoped<IUserOfferRepository, UserOfferRepository>();
         services.AddScoped<IUserReviewRepository, UserReviewRepository>();
         services.AddScoped<IBookingRepository, BookingRepository>();
+<<<<<<< HEAD
+        services.AddScoped<IAddressRepository, AddressRepository>();
+=======
         services.AddScoped<IBookingRepository, BookingRepository>();
         services.AddScoped<IAccommodationRepository, AccommodationRepository>();
         services.AddScoped<IOfferRepository, OfferRepository>();
         services.AddScoped<IRefundRepository, RefundRepository>();
+>>>>>>> 9cdb45b0ec98b41c8219a91ab94a2f4921e9ca02
         services.AddScoped<IUnitOfWork, UnitOfWork>();
     }
 

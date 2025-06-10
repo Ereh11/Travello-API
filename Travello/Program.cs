@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Builder;
 var builder = WebApplication.CreateBuilder(args);
 // Infrastructure services registration
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddApplicationServices();
+builder.Services.AddCloudinaryServices(builder.Configuration);
 
 
 
