@@ -236,13 +236,16 @@ namespace Travello_Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("AccommodationId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime>("CheckInDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("CheckOutDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("HotelId")
+                    b.Property<Guid?>("HotelId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("NumberOfGuests")
@@ -258,6 +261,8 @@ namespace Travello_Infrastructure.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("BookingId");
+
+                    b.HasIndex("AccommodationId");
 
                     b.HasIndex("HotelId");
 
@@ -470,6 +475,9 @@ namespace Travello_Infrastructure.Migrations
                     b.Property<string>("PaymentMethod")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<string>("TransactionID")
                         .IsRequired()
@@ -780,11 +788,15 @@ namespace Travello_Infrastructure.Migrations
 
             modelBuilder.Entity("Travello_Domain.Booking", b =>
                 {
-                    b.HasOne("Travello_Domain.Hotel", "Hotel")
+                    b.HasOne("Travello_Domain.Accommodation", "Accommodation")
                         .WithMany("Bookings")
-                        .HasForeignKey("HotelId")
+                        .HasForeignKey("AccommodationId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
+
+                    b.HasOne("Travello_Domain.Hotel", null)
+                        .WithMany("Bookings")
+                        .HasForeignKey("HotelId");
 
                     b.HasOne("Travello_Domain.Payment", "Payment")
                         .WithOne()
@@ -798,7 +810,7 @@ namespace Travello_Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Hotel");
+                    b.Navigation("Accommodation");
 
                     b.Navigation("Payment");
 
@@ -954,6 +966,8 @@ namespace Travello_Infrastructure.Migrations
 
             modelBuilder.Entity("Travello_Domain.Accommodation", b =>
                 {
+                    b.Navigation("Bookings");
+
                     b.Navigation("Rooms");
                 });
 

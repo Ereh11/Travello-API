@@ -63,6 +63,7 @@ out/
 _ReSharper.*
 *.DotSettings.user
 
+*.sln
 # Uncomment if you're using test result output
 # TestResults/
 # coverage/

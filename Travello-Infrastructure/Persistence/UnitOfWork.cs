@@ -60,9 +60,5 @@ namespace Travello_Infrastructure.Persistence
             return await _context.SaveChangesAsync();
         }
 
-        public void Dispose()
-        {
-            _context.Dispose();
-        }
     }
 }

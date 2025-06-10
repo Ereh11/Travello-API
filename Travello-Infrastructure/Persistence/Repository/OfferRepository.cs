@@ -38,5 +38,19 @@ namespace Travello_Infrastructure.Persistence.Repository
         {
             return await _context.Offers.AnyAsync(u => u.OfferId == offerId);
         }
+
+        public async Task<IEnumerable<Offer>> GetActiveOffersForUserAsync(Guid userId)
+        {
+            return await _context.Offers                           
+                .Where(o => o.UserOffers.Any(uo => uo.UserId == userId) && o.StartDate <= DateTime.UtcNow && o.ExpiryDate >= DateTime.UtcNow)
+                .ToListAsync();
+
+        }
+        public async Task<Offer?> GetOfferByIdAsync(Guid offerId, Guid userId)
+        {
+            return await _context.Offers
+                .Include(o => o.UserOffers)
+                .FirstOrDefaultAsync(o => o.OfferId == offerId && o.UserOffers.Any(uo => uo.UserId == userId));
+        }
     }
 }

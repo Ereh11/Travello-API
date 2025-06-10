@@ -1,8 +1,7 @@
 ﻿namespace Travello_Domain.Interfaces
 {
-    public interface IUnitOfWork : IDisposable
+    public interface IUnitOfWork 
     {
-
         IUserRepository UserRepository { get; }
         IPassportRepository PassportRepository { get; }
         IOfferRepository OfferRepository { get; }
@@ -15,8 +14,6 @@
         IProfileImageRepository ProfileImageRepository { get; }
         IAttachment Attachment { get; }
         Task<int> SaveChangesAsync();
-        void Dispose();
-
-
+        
     }
 }

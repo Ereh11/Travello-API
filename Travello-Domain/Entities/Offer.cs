@@ -14,7 +14,6 @@ namespace Travello_Domain
         public string PromoCode { get; set; } = string.Empty;
         public DateTime ExpiryDate { get; set; }
         public DateTime StartDate { get; set; }
-
         public Guid? ImageId { get; set; }
         public ProfileImage? Image { get; set; } = null!;
         public ICollection<UserOffer> UserOffers { get; set; } = new HashSet<UserOffer>();
